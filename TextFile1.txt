@@ -1,0 +1,26 @@
+# Real-Time Color Detection
+
+A simple Python project that detects and tracks a specific color (configured for Orange) in real-time using a webcam, then draws a green bounding box around it.
+
+## How it Works
+1. **Color Space Conversion:** The webcam frame is converted from BGR to HSV to ensure accurate color isolation regardless of lighting conditions.
+2. **Masking:** cv2.inRange creates a binary mask where the target color appears as white and everything else is black.
+3. **Bounding Box Localization:** Instead of using complex loops, the mask is converted to a Pillow image object. The getbbox() method instantly finds the exact coordinates of the detected color.
+4. **Drawing:** OpenCV uses these coordinates to draw a green rectangle on the live video feed.
+
+## Requirements
+Make sure you have the following libraries installed:
+```bash
+pip install numpy opencv-python Pillow
+
+Usage
+
+
+1-Keep both computer_vision.py and util.py in the same project folder.
+2-Run the computer_vision.py script to start the real-time color detection.
+3- press 'q' to exit the application.
+
+## Future Improvements (coming soon)
+- [ ] Support for multiple colors
+- [ ] Real-time FPS counter  
+- [ ] Center point tracking
