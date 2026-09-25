@@ -20,7 +20,4 @@ Usage
 2-Run the computer_vision.py script to start the real-time color detection.
 3- press 'q' to exit the application.
 
-## Future Improvements (coming soon)
-- [ ] Support for multiple colors
-- [ ] Real-time FPS counter  
-- [ ] Center point tracking
+
